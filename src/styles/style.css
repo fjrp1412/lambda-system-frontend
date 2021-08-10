@@ -85,10 +85,11 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .form-container form .input-container:nth-child(1) {
-  margin: 68px 0px 27px 0px;
+  margin-top: 30px;
 }
 
 .form-container form .input-container h2 {
@@ -237,3 +238,7 @@ input::placeholder {
   grid-column-start: 3;
   justify-self: center;
 }
+
+
+
+
