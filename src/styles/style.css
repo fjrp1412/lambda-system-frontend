@@ -5,6 +5,8 @@
   --just-white: #FFF;
   --input-background: rgba(255, 255, 255, 0.25);
   --content-background: linear-gradient(to bottom, rgba(26, 26, 31, 0.7), rgba(26, 37, 81, 1));
+  --plus-button: #8bc34a;
+  --minus-button: #a02e25;
 
 }
 
@@ -112,6 +114,13 @@ input::placeholder {
   color: var(--just-white);
 }
 
+.sale-form .sale-form__details {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 1.3rem;
+}
+
 .form-container form .form-button {
   margin-top: 25px;
   width: 120px;
@@ -157,7 +166,7 @@ input::placeholder {
   color: var(--just-white);
 }
 
-.container-content-views .container-list {
+.container-content-views .container-list, .container-forms-views .container-list {
   display: flex;
   flex-direction: column;
   align-items:  center;
@@ -238,6 +247,30 @@ input::placeholder {
   grid-column-start: 3;
   justify-self: center;
 }
+
+.product-card .product-card__buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+
+.product-card__buttons button {
+  width: 20px;
+  border-radius: 5px;
+}
+
+.product-card__buttons--plus {
+  background-color: var(--plus-button);
+}
+
+.product-card__buttons--minus {
+  background-color: var(--minus-button);
+}
+
+
 
 
 
