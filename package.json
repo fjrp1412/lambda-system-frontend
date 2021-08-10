@@ -1,0 +1,29 @@
+{
+  "name": "lambda-system-frontend",
+  "version": "1.0.0",
+  "description": "Version 0.1 for lambda system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patxxi/lambda-system-frontend.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "SPA"
+  ],
+  "author": "Francisco Ruiz <fruiz.rc@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patxxi/lambda-system-frontend/issues"
+  },
+  "homepage": "https://github.com/patxxi/lambda-system-frontend#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.2"
+  }
+}
