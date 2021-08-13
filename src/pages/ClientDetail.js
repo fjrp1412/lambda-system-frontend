@@ -26,7 +26,7 @@ const ClientDetail = async () => {
 	  <div class="detail-card__details detail-card__details--sales">
 	    <div class="sale-container">
 	      <span class="sale-container__title">Compras totales: </span>
-	      <span class="sale-container__amount">${client.purchases}$</span>
+	      <span class="sale-container__amount">${client.purchases}</span>
 	    </div>
 	    <div class="sale-container">
 	      <span class="sale-container__title">Total monto: </span>

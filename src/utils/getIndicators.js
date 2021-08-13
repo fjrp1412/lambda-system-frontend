@@ -1,7 +1,7 @@
 const getIndicator = async (route) => {
   const API = route[2]
     ? `https://lambda-sales-system-api.herokuapp.com/api/${route[1]}/indicator/${route[2]}/`
-    : `https://lambda-sales-system-api.herokuapp.com/api/${route[1]}/`;
+    : `https://lambda-sales-system-api.herokuapp.com/api/${route[1]}/indicator/`;
   console.log(API);
   try {
     let response = await fetch(API);

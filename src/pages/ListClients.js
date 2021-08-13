@@ -12,14 +12,14 @@ const ListClients = async () => {
     ${clients
       .map((client) => {
         return `
-	<a href="#/client/${client.id}">
+	<a href="#/client/${client.client.id}">
 	  <div class="product-card">
 	    <div class="product-card__image">
-	      <img src="${client.image}" alt="">
+	      <img src="${client.client.image}" alt="">
 	    </div>
 	    <div class="product-card__detail--name">
-	      <span>${client.name}</span>
-	      <span>${client.identity_card}</span>
+	      <span>${client.client.name}</span>
+	      <span>${client.client.identity_card}</span>
 	    </div>
 	    <div class="product-card__detail--sale">
 	      <span>Mayor Venta:</span>

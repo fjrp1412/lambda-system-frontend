@@ -17,7 +17,7 @@ const Home = () => {
 	  <div class="container-options__option">
 	    <a href="./client-form.html"> Registrar cliente </a></div>
 	  <div class="container-options__option">
-	    <a href="./salesman-list.html"> Lista de vendedores </a></div>
+	    <a href="#/salesman"> Lista de vendedores </a></div>
 	  <div class="container-options__option">
 	    <a href="#/client"> Lista de clientes </a></div>
 	</div>

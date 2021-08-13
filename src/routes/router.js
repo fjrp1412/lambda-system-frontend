@@ -3,7 +3,9 @@ import Home from "../pages/Home.js";
 import ListProducts from "../pages/ListProducts.js";
 import ProductDetail from "../pages/ProductDetail.js";
 import ListClients from "../pages/ListClients.js";
+import ListSalesman from "../pages/ListSalesman.js";
 import ClientDetail from "../pages/ClientDetail.js";
+import SalesmanDetail from "../pages/SalesmanDetail.js";
 import getUrl from "../utils/getUrl.js";
 
 const routes = {
@@ -12,6 +14,8 @@ const routes = {
   "product/id": ProductDetail,
   "client": ListClients,
   "client/id": ClientDetail,
+  "salesman": ListSalesman,
+  "salesman/id": SalesmanDetail,
 };
 
 const router = async () => {
