@@ -7,7 +7,7 @@ const ClientDetail = async () => {
   const view = `
       <div class="container-detail">
 	<div class="container-detail__title">
-	  <h2>Detalle del vendedor</h2>
+	  <h2>Detalle del cliente</h2>
 	</div>
 
 	<div class="detail-card">
@@ -34,9 +34,10 @@ const ClientDetail = async () => {
 	    </div>
 	    <div class="sale-container">
 	      <span class="sale-container__title">Mayor compra: </span>
-	      <span class="sale-container__amount">${
-          client.biggest_sale ? client.biggest_sale : 0
-        }$</span>
+	      <a href="#/sale/${client.biggest_sale}">
+		  <span class="sale-container__amount">#${client.biggest_sale}</span>
+	      </a>
+
 	    </div>
 	  </div>
 

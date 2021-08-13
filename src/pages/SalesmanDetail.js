@@ -34,9 +34,10 @@ const SalesmanDetail = async () => {
 	    </div>
 	    <div class="sale-container">
 	      <span class="sale-container__title">Mayor venta: </span>
-	      <span class="sale-container__amount">${
-          salesman.biggest_sale ? salesman.biggest_sale : 0
-        }</span>
+
+	      <a href=#/sale/${salesman.biggest_sale}>
+		<span class="sale-container__amount">#${salesman.biggest_sale}</span>
+	      </a>
 	    </div>
 	  </div>
 

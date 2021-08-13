@@ -6,6 +6,8 @@ import ListClients from "../pages/ListClients.js";
 import ListSalesman from "../pages/ListSalesman.js";
 import ClientDetail from "../pages/ClientDetail.js";
 import SalesmanDetail from "../pages/SalesmanDetail.js";
+import ListSales from "../pages/ListSales.js";
+import SaleDetail from "../pages/SaleDetail.js";
 import getUrl from "../utils/getUrl.js";
 
 const routes = {
@@ -16,6 +18,8 @@ const routes = {
   "client/id": ClientDetail,
   "salesman": ListSalesman,
   "salesman/id": SalesmanDetail,
+  "sale": ListSales,
+  "sale/id": SaleDetail,
 };
 
 const router = async () => {

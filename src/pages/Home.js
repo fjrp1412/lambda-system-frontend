@@ -11,7 +11,7 @@ const Home = () => {
 	  <div class="container-options__option">
 	    <a href="#/product"> Lista de productos</a></div>
 	  <div class="container-options__option">
-	    <a href="./sales-list.html"> Historial de Ventas</a></div>
+	    <a href="#/sale"> Historial de Ventas</a></div>
 	  <div class="container-options__option">
 	    <a href="./product-form.html"> Registrar productos </a></div>
 	  <div class="container-options__option">

@@ -347,6 +347,10 @@ input::placeholder {
   flex-direction: column;
   margin: 5px;
 }
+ .detail-card .detail-card__details a {
+   color: var(--just-white);
+ }
 
-
-
+.detail-card__details--sales .sale-container a {
+  margin: 0 auto;
+}
