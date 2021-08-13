@@ -1,6 +1,8 @@
 import getData from "../utils/getData.js";
+import getUrl from "../utils/getUrl.js";
 const ListProducts = async () => {
-  const products = await getData();
+  const route = getUrl();
+  const products = await getData(route);
   const view = `
       <div class="container-list">
 	<div class="container-list__title">
@@ -10,10 +12,10 @@ const ListProducts = async () => {
     ${products
       .map((product) => {
         return `
-	<a href="./product-detail.html">
+	  <a href="#/product/${product.id}">
 	  <div class="product-card">
 	    <div class="product-card__image">
-	      <img src="${product.image}" alt="${product.name}">
+	      <img src="${product.image}" alt="">
 	    </div>
 	    <div class="product-card__detail--name">
 	      <span>${product.name}</span>

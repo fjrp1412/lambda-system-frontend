@@ -9,7 +9,7 @@ const Home = () => {
 	  <div class="container-options__option">
 	    <a href="./sales-form.html"> Registrar Venta </a></div>
 	  <div class="container-options__option">
-	    <a href="./product-list.html"> Lista de productos</a></div>
+	    <a href="#/product"> Lista de productos</a></div>
 	  <div class="container-options__option">
 	    <a href="./sales-list.html"> Historial de Ventas</a></div>
 	  <div class="container-options__option">
@@ -19,7 +19,7 @@ const Home = () => {
 	  <div class="container-options__option">
 	    <a href="./salesman-list.html"> Lista de vendedores </a></div>
 	  <div class="container-options__option">
-	    <a href="./clients-list.html"> Lista de clientes </a></div>
+	    <a href="#/client"> Lista de clientes </a></div>
 	</div>
       </div>
   `;
