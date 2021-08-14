@@ -30,11 +30,11 @@ const ListSalesman = async () => {
 	    </div>
 	  </div>
 	</a>
-      </div>
 
       `;
       })
       .join("")}
+    </div>
   `;
   return view;
 };

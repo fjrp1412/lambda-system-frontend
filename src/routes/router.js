@@ -14,19 +14,20 @@ import FormSalesman from "../pages/FormSalesman.js";
 import FormSales from "../pages/FormSales.js";
 import sendData from "../utils/sendData.js";
 import getUrl from "../utils/getUrl.js";
+import sendFormSales from "../utils/sendFormSales.js";
 
 const routes = {
   "/": Home,
-  "product": ListProducts,
+  product: ListProducts,
   "product/id": ProductDetail,
   "product/form": FormProduct,
-  "client": ListClients,
+  client: ListClients,
   "client/id": ClientDetail,
   "client/form": FormClient,
-  "salesman": ListSalesman,
+  salesman: ListSalesman,
   "salesman/id": SalesmanDetail,
   "salesman/form": FormSalesman,
-  "sale": ListSales,
+  sale: ListSales,
   "sale/id": SaleDetail,
   "sale/form": FormSales,
 };
@@ -50,6 +51,13 @@ const router = async () => {
   if (form) {
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
+
+      if (url === "sale/form") {
+        console.log("sale");
+        await sendFormSales(form);
+        return;
+      }
+
       await sendData(form);
       return;
     });
