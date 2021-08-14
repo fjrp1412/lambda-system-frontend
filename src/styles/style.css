@@ -191,7 +191,7 @@ input::placeholder {
 
 .container-list .product-card, .container-detail .detail-card {
   display: grid;
-  min-width: 308px;
+  min-width: 463px;
   grid-template-columns: 80px 1fr 100px;
   border: solid 2px black;
   border-radius: 25px;
