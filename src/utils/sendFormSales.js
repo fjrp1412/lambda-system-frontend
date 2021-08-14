@@ -1,4 +1,4 @@
-const sendFormSales = async (form) => {
+const sendFormSales = async (form, sales) => {
   const ApiSale = "https://lambda-sales-system-api.herokuapp.com/api/sale/";
   const ApiSaleProducts =
     "https://lambda-sales-system-api.herokuapp.com/api/sale/product-sale/";
@@ -8,10 +8,6 @@ const sendFormSales = async (form) => {
   let response = await fetch(ApiProducts);
   const products = await response.json();
 
-  response = await fetch(ApiSale);
-  const sales = await response.json();
-
-  console.log("listo");
   const formData = new FormData(form);
 
   const saleData = {
@@ -39,9 +35,8 @@ const sendFormSales = async (form) => {
 
   productDataSerialized.sale = sales.length + 1;
   const countSales = sales.length + 1;
-
-  console.log(productDataSerialized);
-  console.log(saleData);
+  const bill = document.getElementById("bill");
+  bill.innerHTML = `<span>#${countSales}</span>`;
 
   try {
     response = await fetch(ApiSale, {
@@ -57,6 +52,9 @@ const sendFormSales = async (form) => {
   }
 
   Object.entries(productDataSerialized).forEach(async (productElement) => {
+    if (productElement[1] <= 0) {
+      return;
+    }
     try {
       const response = await fetch(ApiSaleProducts, {
         body: JSON.stringify({

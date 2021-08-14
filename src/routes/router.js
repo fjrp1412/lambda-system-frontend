@@ -12,9 +12,9 @@ import FormProduct from "../pages/FormProduct.js";
 import FormClient from "../pages/FormClient.js";
 import FormSalesman from "../pages/FormSalesman.js";
 import FormSales from "../pages/FormSales.js";
-import sendData from "../utils/sendData.js";
 import getUrl from "../utils/getUrl.js";
-import sendFormSales from "../utils/sendFormSales.js";
+import sendForm from "../utils/sendForm.js";
+import resolveRoutes from "../utils/resolveRoutes.js";
 
 const routes = {
   "/": Home,
@@ -35,32 +35,14 @@ const routes = {
 const router = async () => {
   const header = null || document.getElementById("header");
   const content = null || document.getElementById("content");
-  let url = getUrl();
-
-  if (url.length > 2) {
-    url[2] = url[2] !== "form" ? "/id" : `/${url[2]}`;
-  }
-  url = url.join("");
+  const url = resolveRoutes();
 
   const render = url ? routes[url] : routes["/"];
   header.innerHTML = Header();
   content.innerHTML = await render();
 
-  const form = document.getElementById("form");
-
-  if (form) {
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-
-      if (url === "sale/form") {
-        console.log("sale");
-        await sendFormSales(form);
-        return;
-      }
-
-      await sendData(form);
-      return;
-    });
+  if (document.getElementById("form")) {
+    await sendForm(url);
   }
 };
 

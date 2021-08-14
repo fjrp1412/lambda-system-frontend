@@ -33,9 +33,7 @@ const FormSales = async () => {
 
 
 	    <div class="sale-form__details">
-	      <div><span>420$</span></div>
-	      <div><span>13000bs</span></div>
-	      <div><span>#00001</span></div>
+	      <div id="bill"></div>
 	    </div>
 
 	    <div class="container-list">
@@ -67,7 +65,7 @@ const FormSales = async () => {
 		  <div class="product-card__buttons">
 		    <button type="button" class="product-card__buttons--minus"><span>-</span></button>
 
-		    <input class="product-card__buttons--quantity" type="number" name="${counter}" id="quantity_${counter++}" >
+		    <input value="0" class="product-card__buttons--quantity" type="number" name="${counter}" id="quantity_${counter++}" >
 
 		    <button type="button" class="product-card__buttons--plus"><span>+</span></button>
 		  </div>
