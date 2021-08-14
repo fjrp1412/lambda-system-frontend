@@ -1,25 +1,7 @@
-<!--- TabNine::sem ---->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../src/styles/style.css">
-    <title>Registrar venta</title>
-  </head>
-  <body>
-    <div class="container-forms-views">
-      <header>
-	<div class="header-container">
-	  <div class="logo-container">
-	    <a href="./index.html"><img class="logo-container__image" src="../src/assets/images/Logo.svg" alt="lambda systems logo"></a>
-	  </div>
-	  <div class="title-container">
-	    <a href="./index.html"><img class="title-container__image" src="../src/assets/images/logo-text.svg" alt="Lambda Systems"></a>
-	  </div>
-	</div>
-      </header>
+import getUrl from "../utils/getUrl.js";
 
+const FormSales = () => {
+  const view = `
       <div class="main-container">
 	<div class="main-container__title">
 	  <h1>Registro</h1>
@@ -78,5 +60,8 @@
 	    </div>
 	</div>
       </div>
-  </body>
-</html>
+  `;
+  return view;
+};
+
+export default FormSales;

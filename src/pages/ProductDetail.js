@@ -49,7 +49,11 @@ const ProductDetail = async () => {
 	  </div>
 
 	  <div class="detail-card__details">
-	    <span>${data.barcode[0].code}</span>
+	    <span>${
+        data.barcode.length > 1
+          ? data.barcode[0].code
+          : "No hay codigo de barras"
+      }</span>
 	  </div>
 	</div>
       </div>

@@ -3,6 +3,7 @@ import getUrl from "../utils/getUrl.js";
 const ListProducts = async () => {
   const route = getUrl();
   const products = await getData(route);
+  console.log(route);
   const view = `
       <div class="container-list">
 	<div class="container-list__title">
