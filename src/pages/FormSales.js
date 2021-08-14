@@ -13,11 +13,30 @@ const FormSales = async () => {
 	  <form id="form"">
 	    <div class="input-container input-sale">
 	      <h2>Id del vendedor</h2>
-	      <input name="salesman" placeholder="Inserte el nombre del vendedor.">
+	      <input id="salesman" list="browser_salesman" name="salesman" placeholder="Inserte el nombre del vendedor.">
+    <datalist id="browser_salesman">
+    ${dataSalesmans
+      .map((salesman) => {
+        return `
+	<option value="${salesman.name}" data-value="${salesman.id}" >
+      `;
+      })
+      .join("")}
+
+    </datalist>
 	    </div>
 	    <div class="input-container input-sale">
 	      <h2>Id del cliente</h2>
-	      <input name="client" placeholder="Inserte el nombre del cliente.">
+	      <input id="client" list="browser_client"name="client" placeholder="Inserte el nombre del cliente.">
+    <datalist id="browser_client">
+    ${dataClients
+      .map((client) => {
+        return `
+	<option value="${client.name}" data-value="${client.id}" >
+      `;
+      })
+      .join("")}
+    </datalist>
 	    </div>
 
 

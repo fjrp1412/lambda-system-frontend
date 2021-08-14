@@ -1,12 +1,12 @@
+import getAllData from "../utils/getAllData.js";
+import convertArrayToObject from "../utils/convertArraytoObject.js";
+
 const sendFormSales = async (form, sales) => {
   const ApiSale = "https://lambda-sales-system-api.herokuapp.com/api/sale/";
   const ApiSaleProducts =
     "https://lambda-sales-system-api.herokuapp.com/api/sale/product-sale/";
-  const ApiProducts =
-    "https://lambda-sales-system-api.herokuapp.com/api/product/";
 
-  let response = await fetch(ApiProducts);
-  const products = await response.json();
+  const { dataClients, dataSalesmans, dataProducts } = await getAllData();
 
   const formData = new FormData(form);
 
@@ -27,11 +27,17 @@ const sendFormSales = async (form, sales) => {
     (acum, item) => {
       return (
         parseFloat(acum) +
-        parseFloat(products[item[0]].price_1 * parseFloat(item[1]))
+        parseFloat(dataProducts[item[0]].price_1 * parseFloat(item[1]))
       );
     },
     0
   );
+
+  const salesmanObject = convertArrayToObject(dataSalesmans);
+  saleData.salesman = salesmanObject[saleData.salesman];
+
+  const clientObject = convertArrayToObject(dataClients);
+  saleData.client = clientObject[saleData.client];
 
   productDataSerialized.sale = sales.length + 1;
   const countSales = sales.length + 1;
@@ -39,7 +45,7 @@ const sendFormSales = async (form, sales) => {
   bill.innerHTML = `<span>#${countSales}</span>`;
 
   try {
-    response = await fetch(ApiSale, {
+    const response = await fetch(ApiSale, {
       body: JSON.stringify(saleData),
       method: "POST",
       headers: {
@@ -61,7 +67,7 @@ const sendFormSales = async (form, sales) => {
           product: parseInt(productElement[0]) + 1,
           sale: countSales,
           quantity: productElement[1],
-          income: products[0].price_1 * parseInt(productElement[1]),
+          income: dataProducts[0].price_1 * parseInt(productElement[1]),
         }),
         method: "POST",
         headers: {
