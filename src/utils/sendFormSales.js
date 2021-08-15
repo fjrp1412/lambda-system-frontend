@@ -55,6 +55,9 @@ const sendFormSales = async (form, sales) => {
     });
   } catch (error) {
     console.log(error);
+    alert(
+      "Revise la informacion del vendedor o del cliente e intentelo de nuevo."
+    );
   }
 
   Object.entries(productDataSerialized).forEach(async (productElement) => {
@@ -77,6 +80,7 @@ const sendFormSales = async (form, sales) => {
       });
     } catch (error) {
       console.log(error);
+      alert("Revise los valores de los productos ingresados");
     }
   });
 };

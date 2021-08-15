@@ -14,11 +14,13 @@ const sendData = async (form) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Accept": "application/json",
+        Accept: "application/json",
       },
     });
+    alert("Usuario creado con exito");
   } catch (error) {
     console.log(error);
+    alert("Falla en el formulario, revise los datos e intentelo de nuevo.");
   }
 };
 
