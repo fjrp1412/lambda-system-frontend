@@ -17,7 +17,7 @@ const sendData = async (form) => {
         Accept: "application/json",
       },
     });
-    alert("Usuario creado con exito");
+    alert("Instancia creada con exito");
   } catch (error) {
     console.log(error);
     alert("Falla en el formulario, revise los datos e intentelo de nuevo.");
